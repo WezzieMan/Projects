@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Project2</title>
+
+    <script>
+        function myImageFunction(productSmallImg) {
+            var productFullImg = document.getElementById("bigger");
+            productFullImg.src = productSmallImg.src;
+        }
+  </script>
+</head>
+<body>
+    <!-- ********* HEADER + NAVIGATION ********* -->
+    <header>
+        <nav>
+            <h1 class="title">Image Gallery</h1>
+            <div class="menu"><a href="../Project1 - CV/index.html">My other projects</a></div>
+        </nav>
+    </header>
+
+    <!-- ********* MAIN WITH THE IMAGES ********* -->
+    <main>
+        <figure class="gallery-item item1">
+            <img src="img/foto1.jpeg" alt="My princess picture one" class="resized" onclick="myImageFunction(this);">
+        </figure>
+        <figure class="gallery-item item2">
+            <img src="img/foto2.jpeg" 
+                alt="My princess picture two" 
+                class="resized"
+                onclick="myImageFunction(this);">
+        </figure>
+        <figure class="gallery-item item3">
+            <img src="img/foto3.jpeg" 
+                alt="My princess picture three" 
+                class="resized"
+                onclick="myImageFunction(this);">
+        </figure>
+        <figure class="gallery-item item4">
+            <img src="img/foto4.jpeg" 
+                alt="My princess picture four" 
+                class="resized"
+                onclick="myImageFunction(this);">
+        </figure>
+        <figure class="gallery-item item5">
+            <img src="img/best.jpeg" alt="My princess picture but bigger" class="bigger">
+        </figure>
+    </main>
+
+     <!-- ********* FOOTER ********* -->   
+     <footer>
+        <div class="content-wrap">
+          <h2>Keep in touch with me</h2>
+
+          <!-- Social media and contact links. -->
+          <ul class="contact-list">
+            <li><a href="mailto:florian.danutz15@gmail.com">Email</a></li>
+            <li><a href="https://www.instagram.com/daniel_marcoci/" target="_blank">Instagram</a></li>
+            <li><a href="https://www.linkedin.com/in/daniel-marcoci-19459b212/" target="_blank">LinkedIn</a></li>
+            <li><a href="https://github.com/WezzieMan" target="_blank">GitHub</a></li>
+          </ul>
+        </div>
+      </footer>
+
+
+</body>
+</html>
