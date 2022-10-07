@@ -74,9 +74,9 @@ a:hover { color: #DBD6D6; }
     grid-row: 1 / 5;
 }
 
-.bigger { transition: transform 1s; }
+#bigger { transition: transform 1s; }
 
-.bigger:hover {
+#bigger:hover {
     transform: scale(1.10);
     cursor: zoom-in;
 }
