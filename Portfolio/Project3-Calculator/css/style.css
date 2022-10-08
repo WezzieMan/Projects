@@ -1,0 +1,59 @@
+/* Global */
+html {
+    box-sizing: border-box;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #bdc3c7, #2c3e50);
+    }
+
+/* Main */
+.container {
+    border: 1px solid black;
+    display: grid;
+    justify-content: center; /* set to center of screen*/
+    align-content: center;
+    min-height: 100vh; /* grid will be always 100% of height*/
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+    
+}
+.container > button {
+    cursor: pointer; /* instead of normal mouse, we have the hand pointing*/
+    font-size: 2rem;
+    border: 1px, solid #FFFFFF;
+    outline: none;
+    background-color: rbga(255, 255, 255, 0.75);
+    border-radius: 2em;
+}
+
+.container > button:hover { background-color: #a9a9a9; }
+
+.bigBtn {
+    grid-column: span 2;
+    color: #B77AF5;
+    background-color: rgba(6, 46, 85, 0.8);
+}
+.screen {
+    grid-column: 1 / -1;
+    /* background-color: linear-gradient(to right, #bdc3c7, #2c3e50); */
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.screen .prevResult {
+    color: rgba(255,255, 255, 0.75);
+    font-size: 1.5rem;
+}
+.screen .currentResult {
+    color: white;
+    font-size: 2.5rem;
+}
