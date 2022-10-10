@@ -45,6 +45,7 @@ a:hover { color: #DBD6D6; }
 /* Main */
 .container {
     width: 40%;
+    min-height: 100vh;
 }
 .container img {
     width: 100%;
