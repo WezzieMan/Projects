@@ -25,9 +25,9 @@ body {
 .container > button {
     cursor: pointer; /* instead of normal mouse, we have the hand pointing*/
     font-size: 2rem;
-    border: 1px, solid #FFFFFF;
+    /* border: 1px, solid #FFFFFF; */
+    /* background-color: rbga(255, 255, 255, 0.75); */
     outline: none;
-    background-color: rbga(255, 255, 255, 0.75);
     border-radius: 2em;
 }
 
@@ -50,6 +50,8 @@ body {
     padding: 10px;
     word-wrap: break-word;
     word-break: break-all;
+    border: 2px solid black;
+    border-radius: 2em;
 }
 .screen .prevResult {
     color: rgba(255,255, 255, 0.75);
