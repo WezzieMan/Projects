@@ -11,7 +11,7 @@ body {
     background: linear-gradient(to right, #bdc3c7, #2c3e50);
     }
 
-/* Main */
+/* Calculator */
 .container {
     border: 1px solid black;
     display: grid;
@@ -38,6 +38,8 @@ body {
     color: #B77AF5;
     background-color: rgba(6, 46, 85, 0.8);
 }
+
+/* Screen */
 .screen {
     grid-column: 1 / -1;
     /* background-color: linear-gradient(to right, #bdc3c7, #2c3e50); */

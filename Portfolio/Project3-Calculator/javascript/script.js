@@ -12,16 +12,19 @@ class Calculator {
         this.operation = undefined
     }
 
+    //cancel one by one 
     delete() {
         this.currentOperand = this.currentOperand.toString().slice(0, -1)
     }
 
+    //insert numbers on the screen
     appendNumber(number) {
         if (number === '.' && this.currentOperand.includes('.')) return
 
         this.currentOperand = this.currentOperand.toString() + number.toString()
     }
 
+    //function where controls if there is a new operation to do or do a saved operation 
     chooseOperation(operation) {
         if (this.currentOperand === '') return
 
@@ -34,6 +37,7 @@ class Calculator {
         this.currentOperand = ''
     }
 
+    //do the calculations
     compute() {
         let computation
         const prev = parseFloat(this.previousOperand)
@@ -72,6 +76,7 @@ class Calculator {
         if (isNaN(integerDigits)) {
             integerDisplay = ''
         }else {
+            //cercare cosa è quel maximumfractiondigits
             integerDisplay = integerDigits.toLocaleString('en', { maximumFractionDigits: 0 })
         }
 
@@ -82,10 +87,10 @@ class Calculator {
         }
       }
 
+    //capire meglio questa funzione
     updateDisplay() {
-        this.currentOperandTextElement.innerText =
-        this.getDisplayNumber(this.currentOperand)
-
+        this.currentOperandTextElement.innerText = this.getDisplayNumber(this.currentOperand)
+ 
         if (this.operation != null) {
             this.previousOperandTextElement.innerText = `${this.getDisplayNumber(this.previousOperand)} ${this.operation}` 
         } else {
@@ -103,8 +108,10 @@ const allClearButton = document.querySelector('[data-all-clear]')
 const previousOperandTextElement = document.querySelector('[data-previous-operand]')
 const currentOperandTextElement = document.querySelector('[data-current-operand]')
 
+//new Calculator object
 const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement)
 
+//every eventListener for the number, operations, delete and clear buttons
 numberButtons.forEach(button => {
     button.addEventListener('click', () => {
         calculator.appendNumber(button.innerText)
@@ -133,44 +140,3 @@ deleteButton.addEventListener('click', button => {
     calculator.delete()
     calculator.updateDisplay()
 })
-
-document.addEventListener('keydown', function (event) {
-    let patternForNumbers = /[0-9]/g;
-    let patternForOperators = /[+\-*\/]/g
-
-    if (event.key.match(patternForNumbers)) {
-      event.preventDefault();
-      calculator.appendNumber(event.key)
-      calculator.updateDisplay()
-    }
-
-    if (event.key === '.') {
-      event.preventDefault();
-      calculator.appendNumber(event.key)
-      calculator.updateDisplay()
-    }
-
-    if (event.key.match(patternForOperators)) {
-      event.preventDefault();
-      calculator.chooseOperation(event.key)
-      calculator.updateDisplay()
-    }
-
-    if (event.key === 'Enter' || event.key === '=') {
-      event.preventDefault();
-      calculator.compute()
-      calculator.updateDisplay()
-    }
-
-    if (event.key === "Backspace") {
-      event.preventDefault();
-      calculator.delete()
-      calculator.updateDisplay()
-    }
-
-    if (event.key == 'Delete') {
-      event.preventDefault();
-      calculator.clear()
-      calculator.updateDisplay()
-    }
-});
