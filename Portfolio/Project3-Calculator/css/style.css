@@ -20,7 +20,6 @@ body {
     min-height: 100vh; /* grid will be always 100% of height*/
     grid-template-columns: repeat(4, 100px);
     grid-template-rows: minmax(120px, auto) repeat(5, 100px);
-    
 }
 .container > button {
     cursor: pointer; /* instead of normal mouse, we have the hand pointing*/
@@ -72,6 +71,8 @@ body {
         min-height: 100vh; /* grid will be always 100% of height*/
         grid-template-columns: repeat(4, 70px);
         grid-template-rows: minmax(60px, auto) repeat(5, 70px);
-        
+    }
+    .screen {
+        grid-row: 1 / -5;
     }
 }
