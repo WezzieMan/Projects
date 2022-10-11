@@ -59,3 +59,17 @@ body {
     color: white;
     font-size: 2.5rem;
 }
+
+/* Media queries */
+@media (max-width: 500px) {
+    .container {
+        border: 1px solid black;
+        display: grid;
+        justify-content: center; /* set to center of screen*/
+        align-content: center;
+        min-height: 100vh; /* grid will be always 100% of height*/
+        grid-template-columns: repeat(4, 70px);
+        grid-template-rows: minmax(60px, auto) repeat(5, 70px);
+        
+    }
+}
