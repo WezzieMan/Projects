@@ -61,6 +61,37 @@ body {
     font-size: 2.5rem;
 }
 
+/* Footer */
+footer {
+    background-color: #100F10;
+    color: #F7FFF7;
+    text-align: center;
+    margin: 0;
+}
+.contact-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact-list a { padding: 18px; }
+
+footer .contact-list {
+    display: flex;
+    justify-content: center;
+}
+.content-wrap {
+    max-width: 800px;
+    width: 60%;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+a {
+    text-decoration: none;
+    color: rgba(19, 65, 111, 0.8);
+}
+
+a:hover { color: #DBD6D6; }
+
 /* Media queries */
 @media (max-width: 500px) {
     .container {
@@ -74,5 +105,10 @@ body {
     }
     .screen {
         grid-row: 1 / -5;
+    }
+}
+@media (max-width: 850px) {
+    .contact-list a {
+        padding: 10px;
     }
 }
