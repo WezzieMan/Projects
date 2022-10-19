@@ -1,0 +1,17 @@
+/* Global */
+html {
+    box-sizing: border-box;
+    height: auto;
+}
+
+*, *::before, *::after { box-sizing: inherit; }
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+
+    /*doing this, you can easily put in center everything inside the body element*/
+    display: flex;
+    justify-content: center;
+}
