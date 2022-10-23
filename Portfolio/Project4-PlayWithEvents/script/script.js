@@ -35,7 +35,6 @@ cells.forEach(cell => {
   cell.style.alignItems = "center";
   
   console.log(cell.style); //for testing
-  cell.innerText = "Press 'C' key for a surprise";
   
   const cellsBackground = cell.style.backgroundColor;
   console.log(`The inital random Hex code color for ${cell.classList}: ${randomColor()}`)
@@ -51,7 +50,6 @@ cells.forEach(cell => {
       cell.style.backgroundColor = "white"
     }else {
       cell.style.backgroundColor = randomColor();
-      cell.style.color = cell.style.backgroundColor;
     }
   })
 });
@@ -86,5 +84,10 @@ body.addEventListener("keypress", (event) => {
     body.style.backgroundColor === "" 
     ? body.style.backgroundColor = "#181818" 
     : body.style.backgroundColor === ""
+
+    cells.forEach(cell => {
+      let id = cell.id
+      setTimeout(() => { cell.style.backgroundColor="#000" }, (1000*id));
+    });
   }
 })
