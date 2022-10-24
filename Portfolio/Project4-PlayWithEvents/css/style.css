@@ -26,11 +26,13 @@ body {
     color: #fff;
 }
 
-/* Header */
+/* Menu */
 #menu__toggle {
     opacity: 0;
 }
-#menu__toggle:checked + .menu__btn > span {
+
+/* THIS IS TO TRANSFORM THE HAMBURGER INTO AN X WHEN CLICK ON IT */
+/* #menu__toggle:checked + .menu__btn > span {
   transform: rotate(45deg);
 }
 #menu__toggle:checked + .menu__btn > span::before {
@@ -40,10 +42,13 @@ body {
 #menu__toggle:checked + .menu__btn > span::after {
   top: 0;
   transform: rotate(90deg);
-}
+} */
+
+/* THIS TO SHOW THE ACTUAL MENU WHEN CHECKING THE CHECKBOX */
 #menu__toggle:checked ~ .menu__box {
   left: 0 !important;
 }
+
 .menu__btn {
   position: fixed;
   top: 20px;
@@ -104,7 +109,7 @@ body {
     margin: 2rem;;
     border: none;
     border-radius: 1rem;
-    padding: 1rem 4rem;
+    padding: 1rem 2.5rem;
 }
 
 .confirmBtn:hover { background-color: rgba(32, 32, 32, .8); }
@@ -148,4 +153,10 @@ body {
     right: 2.5rem;
 }
 
-/*want to rotate in order to have a romb,*/
+/* Media queries..did not make it responsive really well :( */
+@media (max-width:630px) {
+  .grid-container {
+    grid-template-columns: repeat(4, 7rem);
+    gap: .5rem;
+  }
+}
